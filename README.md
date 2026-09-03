@@ -90,3 +90,19 @@ mot era riktiga domäner innan ni deployar.
   automatiskt, så `POST` och `DELETE` fungerar utan extra kod.
 - **Slash i adressen**: alla endpoints anropas konsekvent utan
   avslutande `/`, både i backend-routes och i frontendens `api.js`.
+
+## Kodproblem jag stötte på 
+
+**Problem:** Efter `npm install` och `npm run dev` i backend-mappen fick jag
+felmeddelandet `'NODE_ENV' is not recognized as an internal or external
+command` i PowerShell på Windows.
+
+**Orsak:** Mina npm-scripts satte miljövariabeln så här:
+`NODE_ENV=development node --watch server.js`. Den syntaxen fungerar i
+bash/zsh (Mac/Linux), men PowerShell och cmd på Windows förstår den inte.
+
+**Lösning:** Installerade paketet `cross-env` som devDependency och
+uppdaterade scripten till t.ex. `cross-env NODE_ENV=development node
+--watch server.js`. `cross-env` sätter miljövariabeln på ett sätt som
+funkar oavsett operativsystem, så samma script körs nu likadant på
+Windows, Mac och Linux.
