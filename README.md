@@ -3,12 +3,12 @@
 ## Beskrivning
 
 Ett enkelt fullstack-biljettsystem byggt för att öva på CORS mellan en
-front end (React) och en back end (Express + better-sqlite3).
+Frontend (React) och en Backend (Express + better-sqlite3).
 
 Man kan:
 
-- Skapa en ny biljett (får en slumpmässig kod)
-- Använda en biljett genom att mata in koden (kan bara göras en gång)
+- Skapa en ny biljett
+- Använda en biljett genom att mata in koden
 - Radera en biljett som inte är använd
 - Lista alla biljetter och se om de är använda eller inte
 
