@@ -1,5 +1,3 @@
-// Adressen till backend kommer från .env, byts mellan dev och prod
-// utan att koden ändras.
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 export async function createTicket() {

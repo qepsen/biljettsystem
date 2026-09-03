@@ -1,6 +1,5 @@
 import Database from "better-sqlite3";
 
-// Tester körs mot en databas i minnet, så de aldrig påverkar tickets.db
 const dbFile = process.env.NODE_ENV === "test" ? ":memory:" : "tickets.db";
 
 const db = new Database(dbFile);

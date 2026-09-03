@@ -5,7 +5,6 @@ import DeleteTicket from "./components/DeleteTicket";
 import TicketList from "./components/TicketList";
 
 export default function App() {
-  // Ökas varje gång något ändras, så att listan laddas om
   const [refreshKey, setRefreshKey] = useState(0);
   const refresh = () => setRefreshKey((k) => k + 1);
 

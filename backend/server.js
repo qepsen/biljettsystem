@@ -1,7 +1,5 @@
 import dotenv from "dotenv";
 
-// Växlar automatiskt mellan .env.development och .env.production
-// beroende på NODE_ENV. Löser "dev vs. prod"-problemet i README.
 const envFile =
   process.env.NODE_ENV === "production" ? ".env.production" : ".env.development";
 dotenv.config({ path: envFile });
